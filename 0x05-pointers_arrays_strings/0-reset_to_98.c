@@ -1,24 +1,13 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * reset_to_98 - updates the value of n to 98
+ * @n: integer pointer to a variable to be updated
  *
- * Return: Always 0.
+ * Return: nothing
  */
+
 void reset_to_98(int *n)
 {
 	*n = 98;
-	return n;
-}
-int main(void)
-{
-	int n;
-	int *p;
-
-	n = 402;
-	p = &n;
-	printf("n=%d\n", n);
-	reset_to_98(p);
-	printf("n=%d\n", n);
-    	return (0);
 }
