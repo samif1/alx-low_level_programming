@@ -1,38 +1,43 @@
-#include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
-
+#include "main.h"
 /**
- * print_tab - Prints an array of string
- * @tab: The array to print
- *
- * Return: nothing
+ * argstostr - prints args
+ * @ac: takes in width of grid
+ * @av: height of grid
+ * Return: the args one line at a time
  */
-void print_tab(char **tab)
+
+char *argstostr(int ac, char **av)
 {
-  int i;
+	char *str;
+	int count = 0, a = 0, b = 0, c = 0;
 
-  for (i = 0; tab[i] != NULL; ++i)
-    {
-      printf("%s\n", tab[i]);
-    }
-}
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: 1 if an error occurred, 0 otherwise
- */
-int main(void)
-{
-  char **tab;
-
-  tab = strtow("      Holberton School         #cisfun      ");
-  if (tab == NULL)
-    {
-      printf("Failed\n");
-      return (1);
-    }
-  print_tab(tab);
-  return (0);
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	while (a < ac)
+	{
+		b = 0;
+		while (av[a][b] != '\0')
+		{
+			count++;
+			b++;
+		}
+		a++;
+	}
+	count = count + ac + 1;
+	str = malloc(sizeof(char) * count);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	for (a = 0; a < ac; a++)
+	{
+		for (b = 0; av[a][b] != '\0'; b++)
+		{
+			str[c] = av[a][b];
+			c++;
+		}
+		str[c] = '\n';
+		c++;
+	}
+	return (str);
 }
