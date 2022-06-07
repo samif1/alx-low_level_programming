@@ -1,20 +1,22 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_alphabet  - Entry Point
+ * Description: prints the alphabet, in lowercase, followed by a new line
  *
- * Return: Always 0.
+ * Return: void
  */
-
-
 void print_alphabet(void)
 {
-	char c = 'a';
+	char ch;
 
-	while (c <= 'z')
+	ch = 'a';
+
+	while (ch <= 'z')
 	{
-		putchar(c);
-		c++;
+		_putchar(ch);
+		ch++;
 	}
-	putchar('\n');
+
+	_putchar('\n');
 }
