@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- *this will chake if c is upper,lower or not
+ * _isalpha - Entry Point
+ * Description: function that checks for alphabetic character
+ * @c: input parameter
  *
- * Return: Always 0.
+ * Return: 1 if c is a letter, lowercase or uppercase 0 otherwise
  */
 int _isalpha(int c)
 {
