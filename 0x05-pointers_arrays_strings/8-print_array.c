@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-**
+/**
  * print_array - print `n` elements of an array of integers
  * @a: int type array pointer
  * @n: int type integer
