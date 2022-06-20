@@ -5,20 +5,22 @@
  * @s: the used string to beb reversed
  * Return: 0
  */
+
 void rev_string(char *s)
 {
-	char ch;
-	int len = 0;
-	int i;
+	int len, i, half;
+	char temp;
 
-	while (s[len] != '\0')
+	for (len = 0; s[len] != '\0'; len++)
+	;
+	i = 0;
+	half = len / 2;
+
+	while (half--)
 	{
-		len++;
-	}
-	for (i = 0; i < len / 2; i++)
-	{
-		ch = s[i];
-		s[i] = s[len - 1 - i];
-		s[len - 1 - i] = ch;
+		temp = s[len - i - 1];
+		s[len - i - 1] = s[i];
+		s[i] = temp;
+		i++;
 	}
 }

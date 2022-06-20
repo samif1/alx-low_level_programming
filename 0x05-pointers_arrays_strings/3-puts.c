@@ -6,15 +6,15 @@
  *
  * Return: 0
  */
+
 void _puts(char *str)
 {
-	int len = 0;
+	int i = 0;
 
-	while (str[len] != '\0')
+	while (str[i])
 	{
-		_putchar(str[len]);
-		len++;
-
+		_putchar(str[i]);
+		i++;
 	}
 	_putchar('\n');
 }
