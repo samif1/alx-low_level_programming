@@ -30,7 +30,10 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		{
 			break;
 		}
-		dest[len + i] = src[i];
+		else
+		{
+			dest[len + i] = src[i];
+		}
 	}
 	return (dest);
 }
