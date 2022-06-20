@@ -14,10 +14,8 @@ char *_memset(char *s, char b, unsigned int n)
 
 	while (i < n)
 	{
-		printf("%d", s[i]);
-		if (i % 10 == 0)
-		{
-			printf("\n");
-		}
+		s[i] = b;
+		i++;
 	}
+	return (s);
 }
