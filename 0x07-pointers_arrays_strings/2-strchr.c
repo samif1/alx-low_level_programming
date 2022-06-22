@@ -27,9 +27,5 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	for (i = count; i < l; i++)
-	{
-		_putchar(s[i] + '0');
-	}
-	_putchar('\n');
+	return &(s[count]); 
 }
