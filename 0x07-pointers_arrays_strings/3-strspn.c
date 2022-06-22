@@ -1,27 +1,30 @@
 #include "main.h"
 
 /**
-* _strspn -> function string pointer.
-* @s: first parameter.
-* @accept: second parameter.
-* Return: length of accept.
-**/
+ * _strspn - gets the length of a prefix substring
+ * @s: the address of the full string
+ * @accept: adress of the substring
+ *
+ * Return: length of the inital prefix
+ */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i;
-	int count = 0;
+	unsigned int n = 0, i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (s[n] && accept[i])
 	{
-		if (s[i] != accept[c])
+		if (s[n] == accept[i])
 		{
-			count++;
+			i = 0;
+			n++;
 		}
 		else
 		{
-			break;
+			i++;
 		}
-
 	}
-	return (count);
+
+	return (n);
 }
+

@@ -1,31 +1,32 @@
 #include "main.h"
 
 /**
-* _strchr -> pointer of string function.
-* @s: first parameter.
-* @c: second parameter.
-* Return: string s.
-**/
+ * _strchr - Returns a pointer to the first occurrence of the character
+ * @s: pointer to memoery address of the string
+ * @c: The first character occurence in the string
+ *
+ * Return: position
+ */
+
 char *_strchr(char *s, char c)
 {
-	int l = 0;
 	int i;
-	int count = 0;
+	char *position;
 
-	while (s[l] != '\0')
+	for (i = 0; s[i] >= '\0'; i++)
 	{
-		l++;
-	}
-	for (i = 0; i <= l; i++)
-	{
-		if (s[i] != c)
+		if (s[i] == c)
 		{
-			count++;
+			position = &s[i];
+			break;
 		}
 		else
 		{
-			break;
+			position = '\0';
 		}
+
 	}
-	return (&(s[count]));
+
+	return (position);
+
 }
