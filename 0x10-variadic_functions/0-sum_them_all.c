@@ -1,10 +1,11 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
 * sum_them_all -  function.
 * Description - the function that returns sum.
 * @n: the first fixed parameter.
-* @...:  the elli[sesi.
 * Return: sum of inter.
 **/
 
