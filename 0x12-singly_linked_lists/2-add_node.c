@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-* *add_node - the linked list function.
+* add_node - the linked list function.
 * @head: the first parameter.
 * @str: the string parameter.
 * Return: the address of the new element.
